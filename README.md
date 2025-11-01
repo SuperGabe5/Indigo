@@ -5,7 +5,7 @@ This is my solution to fill in the gap that may be left by the death of Chromium
 ## Installation
 
 > [!WARNING]  
-> THIS IS NOT BASED ON ChromiumOS, IT IS BASED ON FEDORA SILVERBLUE
+> THIS IS NOT BASED ON ChromiumOS, IT IS BASED ON FEDORA KINOITE
 
 To rebase an existing atomic Fedora installation to the latest build:
 
