@@ -6,8 +6,8 @@ name: cerium
 description: My solution to fill in the gap the deprecation ChromiumOS will cause.
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/ublue-os/silverblue-main
-image-version: 42
+base-image: ghcr.io/ublue-os/kinoite-main
+image-version: 43
 
 # module configuration, executed in order
 # you can include multiple instances of the same module
@@ -20,27 +20,16 @@ modules:
   - type: dnf
     install:
       packages:
-        - yaru-theme
+        - plasma-oxygen
     remove:
       packages:
         - firefox
         - firefox-langpacks
-
-  - type: gnome-extensions
-    install:
-      - Dash to Panel
-      - ArcMenu
-      - Just Perfection
-      #- User Themes
-      - AppIndicator and KStatusNotifierItem Support
       
   - type: script
     scripts:
       #- gnome_config.sh
       - flatpak_config.sh
-  - type: gschema-overrides
-    include:
-      - gnome-default-settings.gschema.override # test & compile specific override file included in files/gschema-overrides/zz1-myoverride.gschema.override
       
   - type: default-flatpaks
     configurations:
