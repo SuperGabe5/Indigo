@@ -3,7 +3,7 @@
 # image will be published to ghcr.io/<user>/<name>
 name: cerium
 # description will be included in the image's metadata
-description: My solution to fill in the gap the deprecation ChromiumOS will cause.
+description: My Flagship System.
 
 # the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/ublue-os/kinoite-main
@@ -21,6 +21,8 @@ modules:
     install:
       packages:
         - plasma-oxygen
+        - podman
+        - distrobox
     remove:
       packages:
         - firefox
@@ -37,7 +39,10 @@ modules:
         scope: system
         install:
           - org.mozilla.firefox
+          - org.onlyoffice.desktopeditors
+          - com.github.marhkb.Pods
           - org.gnome.Loupe
+          - com.vscodium.codium
       - scope: user
 
   - type: signing
