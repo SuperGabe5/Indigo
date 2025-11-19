@@ -8,6 +8,7 @@ There are a few flavors to choose from:
 
 1. KDE, the flagship one (called by the former CeriumOS name "cerium")
 2. MATE, The Classic One
+   
    (more flavors coming soon)
    
 ## Installation
