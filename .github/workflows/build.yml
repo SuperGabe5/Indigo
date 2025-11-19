@@ -1,4 +1,4 @@
-name: bluebuild
+name: System Build (Flagship)
 on:
   schedule:
     - cron:
