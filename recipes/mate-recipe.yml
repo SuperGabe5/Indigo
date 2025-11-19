@@ -39,12 +39,12 @@ modules:
       - notify: true
         scope: system
         install:
-          - io.gitlab.librewolf-community
+          - org.mozilla.firefox
           - org.onlyoffice.desktopeditors
           - com.github.marhkb.Pods
           - org.gnome.Loupe
           - com.vscodium.codium
-        remove:
-          - org.mozilla.firefox
+        #remove:
+          #- org.mozilla.firefox
       - scope: user
   - type: signing # signs the image
