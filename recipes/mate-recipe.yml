@@ -28,6 +28,11 @@ modules:
       packages:
         - lightdm
         - lightdm-gtk-greeter
+
+  - type: script
+    scripts:
+      #- gnome_config.sh
+      - flatpak_config.sh
     
   - type: default-flatpaks
     configurations:
