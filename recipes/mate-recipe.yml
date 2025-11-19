@@ -47,4 +47,5 @@ modules:
         #remove:
           #- org.mozilla.firefox
       - scope: user
+      
   - type: signing # signs the image
