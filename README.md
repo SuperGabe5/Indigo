@@ -7,7 +7,7 @@ Indigo Linux is a family of immutable Fedora-based Systems
 There are a few flavors to choose from:
 
 1. KDE, the flagship one (called by the former CeriumOS name "cerium")
-2. MATE, The Classic One
+2. MATE, The Classic One ("verde")
    
    (more flavors coming soon)
    
