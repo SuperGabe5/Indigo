@@ -1,0 +1,45 @@
+---
+# yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
+name: server
+description: an atomic system with the lxqt desktop
+
+# Start with the universal blue minimal base
+base-image: ghcr.io/ublue-os/base-main
+image-version: 43
+
+modules:
+  - type: dnf
+    install:
+      packages:
+        - podman
+        - distrobox
+        - '@lxqt-desktop'
+
+        # some basic gnome apps needed for some functionality
+        - sddm
+# remove lightdm because it is broken
+
+  - type: dnf
+    remove:
+      packages:
+        - lightdm
+        - lightdm-gtk-greeter
+
+  - type: script
+    scripts:
+      #- gnome_config.sh
+      - flatpak_config.sh
+    
+  - type: default-flatpaks
+    configurations:
+      - notify: true
+        scope: system
+        install:
+          - org.mozilla.firefox
+          - org.gnome.Loupe
+          - com.vscodium.codium
+        #remove:
+          #- org.mozilla.firefox
+      - scope: user
+      
+  - type: signing # signs the image
