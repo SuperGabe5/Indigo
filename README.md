@@ -32,7 +32,7 @@ EndeavorOS (xfce4) with cockpit installed by default until my own solution is re
 
 Other Information:
 
-Lxqt edition has been deprecated in this Rebase
+LXQt edition has been deprecated in this Rebase
 
 KDE edition has been deprecated in this Rebase because KDE has officially removed x11 support.
 
